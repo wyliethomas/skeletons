@@ -1,0 +1,22 @@
+# Test directories created during development
+test-*/
+tmp/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Logs
+*.log
+
+# Don't ignore template-specific gitignores
+!*/.gitignore

@@ -1,0 +1,74 @@
+services:
+  db:
+    image: postgres:15
+    container_name: ${COMPOSE_NAME}_db
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: ${COMPOSE_NAME}_development
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docker"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: ${COMPOSE_NAME}_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      args:
+        - COMPOSE_NAME=${COMPOSE_NAME}
+    container_name: ${COMPOSE_NAME}_web
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/${COMPOSE_NAME}
+    ports:
+      - "3000:3000"
+    working_dir: /${COMPOSE_NAME}
+    environment:
+      - DATABASE_HOST=db
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  sidekiq:
+    build:
+      context: .
+      args:
+        - COMPOSE_NAME=${COMPOSE_NAME}
+    container_name: ${COMPOSE_NAME}_sidekiq
+    command: bundle exec sidekiq
+    volumes:
+      - .:/${COMPOSE_NAME}
+    working_dir: /${COMPOSE_NAME}
+    environment:
+      - DATABASE_HOST=db
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  redis_data:

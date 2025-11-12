@@ -1,0 +1,44 @@
+# Figaro Configuration
+# Copy this file to config/application.yml and update with your values
+# IMPORTANT: config/application.yml is gitignored - never commit it!
+
+# JWT Secret Key (used for encoding/decoding JWT tokens)
+# Generate with: SecureRandom.hex(64)
+lockbox_key: "your-secret-key-here-generate-with-rails-secret"
+
+# Google OAuth
+google_client_id: "your-google-client-id"
+
+# Apple OAuth (optional)
+apple_client_id: "your-apple-client-id"
+
+# Facebook OAuth (optional)
+facebook_app_id: "your-facebook-app-id"
+facebook_app_secret: "your-facebook-app-secret"
+
+# Database
+# For Docker: use these credentials (matches docker-compose.yml)
+# For local: adjust to your PostgreSQL setup
+postgres_user: "docker"
+postgres_pass: "docker"
+
+# Redis
+# For Docker: redis://redis:6379/0
+# For local: redis://localhost:6379/0
+redis_url: "redis://localhost:6379/0"
+
+# CORS Origins
+cors_origins: "http://localhost:3000,http://localhost:5173"
+
+# Email Configuration (for password resets)
+smtp_address: "smtp.gmail.com"
+smtp_port: "587"
+smtp_domain: "example.com"
+smtp_username: "your-email@example.com"
+smtp_password: "your-smtp-password"
+smtp_authentication: "plain"
+smtp_enable_starttls_auto: "true"
+
+# Application Settings
+app_name: "project-name"
+app_url: "http://localhost:3000"
