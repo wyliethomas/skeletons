@@ -206,14 +206,24 @@ generate_project() {
     print_step "Generating project: ${BOLD}$name${RESET}"
     echo ""
 
-    # Get the directory where this script is located
+    # Find template directory - check multiple locations
     SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-    TEMPLATE_DIR="$SCRIPT_DIR/$template"
+    INSTALL_TEMPLATES_DIR="$HOME/.local/share/project-skeletons"
 
-    # Check if template exists
-    if [[ ! -d "$TEMPLATE_DIR" ]]; then
-        print_error "Template directory not found: $TEMPLATE_DIR"
-        print_info "Available templates should be in the same directory as this script"
+    # Try script directory first (for local development)
+    if [[ -d "$SCRIPT_DIR/$template" ]]; then
+        TEMPLATE_DIR="$SCRIPT_DIR/$template"
+    # Try standard install location
+    elif [[ -d "$INSTALL_TEMPLATES_DIR/$template" ]]; then
+        TEMPLATE_DIR="$INSTALL_TEMPLATES_DIR/$template"
+    else
+        print_error "Template directory not found"
+        print_info "Searched locations:"
+        echo "  • $SCRIPT_DIR/$template"
+        echo "  • $INSTALL_TEMPLATES_DIR/$template"
+        echo ""
+        print_info "Try reinstalling with:"
+        echo "  curl -sSL https://raw.githubusercontent.com/wyliethomas/skeletons/master/install.sh | bash"
         exit 1
     fi
 
