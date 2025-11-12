@@ -12,7 +12,7 @@ Thank you for your interest in contributing! This guide will help you get starte
 
 ## 📋 Before You Start
 
-1. Check existing [issues](https://github.com/YOUR_USERNAME/skeletons/issues) and [pull requests](https://github.com/YOUR_USERNAME/skeletons/pulls)
+1. Check existing [issues](https://github.com/wyliethomas/skeletons/issues) and [pull requests](https://github.com/wyliethomas/skeletons/pulls)
 2. For major changes, open an issue first to discuss
 3. Make sure all templates follow our standards (see below)
 

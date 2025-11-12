@@ -4,9 +4,9 @@
 # install.sh - Installer for create-project CLI
 #
 # Installation options:
-# 1. curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/skeletons/main/install.sh | bash
-# 2. wget -qO- https://raw.githubusercontent.com/YOUR_USERNAME/skeletons/main/install.sh | bash
-# 3. git clone https://github.com/YOUR_USERNAME/skeletons.git && cd skeletons && ./install.sh
+# 1. curl -sSL https://raw.githubusercontent.com/wyliethomas/skeletons/main/install.sh | bash
+# 2. wget -qO- https://raw.githubusercontent.com/wyliethomas/skeletons/main/install.sh | bash
+# 3. git clone https://github.com/wyliethomas/skeletons.git && cd skeletons && ./install.sh
 #################################################################################
 
 set -e
@@ -21,8 +21,8 @@ BLUE="\033[34m"
 CYAN="\033[36m"
 
 # Configuration
-REPO_URL="https://github.com/YOUR_USERNAME/skeletons"
-RAW_URL="https://raw.githubusercontent.com/YOUR_USERNAME/skeletons/main"
+REPO_URL="https://github.com/wyliethomas/skeletons"
+RAW_URL="https://raw.githubusercontent.com/wyliethomas/skeletons/main"
 INSTALL_DIR="$HOME/.local/bin"
 TEMPLATES_DIR="$HOME/.local/share/project-skeletons"
 
@@ -116,13 +116,28 @@ install_templates() {
     # Clone or update templates
     if [[ -d "$TEMPLATES_DIR/.git" ]]; then
         print_info "Updating existing templates..."
-        (cd "$TEMPLATES_DIR" && git pull -q)
+        (cd "$TEMPLATES_DIR" && GIT_TERMINAL_PROMPT=0 git pull -q)
         print_success "Templates updated"
     else
         print_info "Cloning templates repository..."
         rm -rf "$TEMPLATES_DIR"
-        git clone -q "$REPO_URL" "$TEMPLATES_DIR"
-        print_success "Templates cloned"
+
+        # Disable interactive git prompts for public repo
+        # This prevents authentication prompts since the repo is public
+        if GIT_TERMINAL_PROMPT=0 git clone -q "$REPO_URL" "$TEMPLATES_DIR" 2>/dev/null; then
+            print_success "Templates cloned"
+        else
+            print_error "Failed to clone templates repository"
+            echo ""
+            print_info "This usually happens if:"
+            echo "  1. The repository is not public"
+            echo "  2. Network connectivity issues"
+            echo "  3. Git configuration issues"
+            echo ""
+            print_info "You can manually clone instead:"
+            echo -e "  ${CYAN}git clone $REPO_URL $TEMPLATES_DIR${RESET}"
+            exit 1
+        fi
     fi
 }
 

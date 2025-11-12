@@ -62,20 +62,20 @@ Battle-tested project templates for modern application development. Get started 
 ### Quick Install (Recommended)
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/skeletons/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/wyliethomas/skeletons/main/install.sh | bash
 ```
 
 Or with wget:
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/YOUR_USERNAME/skeletons/main/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/wyliethomas/skeletons/main/install.sh | bash
 ```
 
 ### Manual Installation
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/skeletons.git
+git clone https://github.com/wyliethomas/skeletons.git
 cd skeletons
 ```
 
@@ -95,7 +95,7 @@ source ~/.bashrc
 Download just the CLI script:
 
 ```bash
-curl -o create-project https://raw.githubusercontent.com/YOUR_USERNAME/skeletons/main/create-project
+curl -o create-project https://raw.githubusercontent.com/wyliethomas/skeletons/main/create-project
 chmod +x create-project
 ./create-project
 ```
@@ -239,7 +239,7 @@ git pull
 ### Check for CLI updates:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/skeletons/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/wyliethomas/skeletons/main/install.sh | bash
 ```
 
 ## 🎯 Best Practices
