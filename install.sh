@@ -4,8 +4,8 @@
 # install.sh - Installer for create-project CLI
 #
 # Installation options:
-# 1. curl -sSL https://raw.githubusercontent.com/wyliethomas/skeletons/main/install.sh | bash
-# 2. wget -qO- https://raw.githubusercontent.com/wyliethomas/skeletons/main/install.sh | bash
+# 1. curl -sSL https://raw.githubusercontent.com/wyliethomas/skeletons/master/install.sh | bash
+# 2. wget -qO- https://raw.githubusercontent.com/wyliethomas/skeletons/master/install.sh | bash
 # 3. git clone https://github.com/wyliethomas/skeletons.git && cd skeletons && ./install.sh
 #################################################################################
 
@@ -22,7 +22,7 @@ CYAN="\033[36m"
 
 # Configuration
 REPO_URL="https://github.com/wyliethomas/skeletons"
-RAW_URL="https://raw.githubusercontent.com/wyliethomas/skeletons/main"
+RAW_URL="https://raw.githubusercontent.com/wyliethomas/skeletons/master"
 INSTALL_DIR="$HOME/.local/bin"
 TEMPLATES_DIR="$HOME/.local/share/project-skeletons"
 
