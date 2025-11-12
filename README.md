@@ -1,17 +1,17 @@
-# 🚀 Project Skeletons
+# Project Skeletons
 
 Battle-tested project templates for modern application development. Get started in seconds with opinionated, production-ready templates.
 
-## ✨ Features
+## Features
 
-- **🎨 Interactive CLI** - Beautiful, user-friendly command-line interface
-- **⚡ Fast Setup** - Go from zero to coding in under a minute
-- **🐳 Docker Ready** - All templates include Docker configurations
-- **📦 Production Patterns** - Best practices baked in from day one
-- **🔒 Security First** - JWT auth, environment variables, proper CORS
-- **📚 Well Documented** - Each template includes comprehensive documentation
+- ** Interactive CLI** - Beautiful, user-friendly command-line interface
+- ** Fast Setup** - Go from zero to coding in under a minute
+- ** Docker Ready** - All templates include Docker configurations
+- ** Production Patterns** - Best practices baked in from day one
+- ** Security First** - JWT auth, environment variables, proper CORS
+- ** Well Documented** - Each template includes comprehensive documentation
 
-## 📋 Available Templates
+## Available Templates
 
 ### Rails API
 **Perfect for:** Backend APIs, microservices, SaaS platforms
@@ -57,7 +57,7 @@ Battle-tested project templates for modern application development. Get started 
 - CORS middleware
 - Health check endpoints
 
-## 🔧 Installation
+## Installation
 
 ### Quick Install (Recommended)
 
@@ -100,7 +100,7 @@ chmod +x create-project
 ./create-project
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Interactive Mode (Recommended)
 
@@ -174,7 +174,7 @@ Proceed? (y/n): y
   docker compose up   # Start the application
 ```
 
-## 📖 Template-Specific Guides
+## Template-Specific Guides
 
 ### Rails API Setup
 
@@ -230,7 +230,7 @@ make docker   # Build Docker image
 - `make clean` - Clean build artifacts
 - `make docker` - Build Docker image
 
-## 🔄 Updating Templates
+## Updating Templates
 
 The templates are versioned and updated regularly with:
 - Security patches
@@ -250,7 +250,7 @@ git pull
 curl -sSL https://raw.githubusercontent.com/wyliethomas/skeletons/master/install.sh | bash
 ```
 
-## 🎯 Best Practices
+## Best Practices
 
 ### After Creating a Project
 
@@ -277,7 +277,7 @@ curl -sSL https://raw.githubusercontent.com/wyliethomas/skeletons/master/install
    - Document environment variables
    - Add setup instructions for your team
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Here's how:
 
@@ -306,25 +306,25 @@ Found a bug? Have a suggestion?
 - Include template name and steps to reproduce
 - Screenshots help!
 
-## 📝 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Built with:
 - Inspiration from create-react-app, Rails generators, and cookiecutter
 - Best practices from the Rails, React, and Go communities
 - Feedback from developers using these templates
 
-## 📞 Support
+## Support
 
 - **Documentation:** Check individual template README files
 - **Issues:** GitHub Issues
 - **Questions:** GitHub Discussions
 - **Updates:** Star this repo to stay notified
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Additional templates (Vue, Svelte, Python/FastAPI)
 - [ ] Template variants (with/without auth, different databases)
@@ -334,7 +334,7 @@ Built with:
 - [ ] Monorepo template support
 - [ ] Template composition (mix and match features)
 
-## 📊 Template Comparison
+## Template Comparison
 
 | Feature | Rails API | React App | Go Microservice |
 |---------|-----------|-----------|-----------------|
