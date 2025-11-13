@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+# Add these gems to your Gemfile for Email + Google OAuth authentication
+
+# BCrypt for password hashing
+gem 'bcrypt', '~> 3.1.7'
+
+# JWT for token-based authentication
+gem 'jwt'
+
+# Google OAuth authentication
+gem 'google-id-token'
+
+# Environment variable management (optional but recommended)
+gem 'figaro'

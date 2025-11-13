@@ -58,6 +58,50 @@ Battle-tested project templates for modern application development. Get started 
 - CORS middleware
 - Health check endpoints
 
+## 📦 Feature Bundles
+
+**Drop-in feature bundles** extracted from production applications. Install complete features with all layers (models, controllers, migrations, routes) in minutes.
+
+### Available Bundles
+
+#### Authentication: Email + Google OAuth
+**Status:** ✅ Production-Ready
+**For:** Rails applications
+**Features:** Email/password + Google Sign-In, JWT tokens, session management, password reset
+
+**Installation:**
+- **With AI Assistant:** Use [`INSTALL_PROMPT.md`](bundles/rails/authentication/google_plus_email/INSTALL_PROMPT.md)
+- **Manual:** See [`README.md`](bundles/rails/authentication/google_plus_email/README.md)
+
+**Time:** ~15-30 minutes | **Difficulty:** ⭐⭐ Intermediate
+
+---
+
+### Coming Soon
+- OAuth Multi-Provider (Apple, Facebook, GitHub)
+- Two-Factor Authentication
+- Role-Based Access Control
+- User Profile Management
+- File Upload (S3, Azure, GCS)
+- API Rate Limiting
+
+## 🆕 AI-Assisted Workflow (New!)
+
+**Use your AI coding assistant to scaffold projects and install bundles!**
+
+### For AI Assistants (Claude Code, Cursor, Copilot, etc.)
+
+1. **📋 [View all AI prompts](PROMPTS_INDEX.md)** - Complete guide to using AI assistants
+2. **🚀 [Scaffold a project](SCAFFOLD_PROMPT.md)** - Copy-paste prompt to create new projects
+3. **📦 Install bundles** - Add features like authentication with one prompt
+
+**Example:** Want a Rails API with Google OAuth authentication?
+1. Copy [`SCAFFOLD_PROMPT.md`](SCAFFOLD_PROMPT.md) → Paste into your AI assistant
+2. Copy [`bundles/rails/authentication/google_plus_email/INSTALL_PROMPT.md`](bundles/rails/authentication/google_plus_email/INSTALL_PROMPT.md) → Paste into your AI assistant
+3. Done! Your API has full authentication.
+
+---
+
 ## Installation
 
 ### Quick Install (Recommended)
@@ -352,13 +396,33 @@ Built with:
 
 ## Roadmap
 
+### Templates
 - [ ] Additional templates (Vue, Svelte, Python/FastAPI)
 - [ ] Template variants (with/without auth, different databases)
 - [ ] CI/CD template integrations (GitHub Actions, GitLab CI)
 - [ ] Cloud deployment configs (AWS, GCP, Heroku)
 - [ ] Testing framework options
 - [ ] Monorepo template support
-- [ ] Template composition (mix and match features)
+
+### Bundles (Feature Modules)
+- [x] **Authentication Bundle** - Email + Google OAuth ✅
+- [ ] OAuth Multi-Provider (Apple, Facebook, GitHub)
+- [ ] Two-Factor Authentication (TOTP)
+- [ ] Role-Based Access Control (RBAC)
+- [ ] User Profile Management
+- [ ] File Upload (S3, Azure, GCS)
+- [ ] Email Notifications (SendGrid, Mailgun)
+- [ ] Webhook System
+- [ ] API Rate Limiting
+- [ ] Payment Processing (Stripe)
+- [ ] Multi-Tenancy
+
+### AI Integration
+- [x] **AI-Assisted Installation** - Copy-paste prompts ✅
+- [x] **AGENTS.md** - Universal AI assistant context ✅
+- [ ] Interactive bundle discovery via AI
+- [ ] Automated conflict resolution
+- [ ] Smart bundle recommendations based on project
 
 ## Template Comparison
 
