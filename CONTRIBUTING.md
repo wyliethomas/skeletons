@@ -29,7 +29,7 @@ Each template must include:
    - Common tasks/commands
    - Configuration guide
 
-2. **CLAUDE_CONTEXT.md** - AI assistance context file with:
+2. **AGENTS.md** - AI assistance context file with:
    - Project structure overview
    - Key patterns and conventions
    - Important files and their purposes
