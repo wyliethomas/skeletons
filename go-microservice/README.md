@@ -315,4 +315,4 @@ defer db.Close()
 5. Set up CI/CD pipeline
 6. Add monitoring and metrics
 
-See `CLAUDE_CONTEXT.md` for architecture details and patterns.
+See `AGENTS.md` for architecture details, patterns, and comprehensive context for AI coding assistants (works with Claude Code, GitHub Copilot, Cursor, and similar tools).

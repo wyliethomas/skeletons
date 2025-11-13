@@ -468,13 +468,29 @@ JWT tokens expire after 5 days. User needs to sign in again.
 
 ## Architecture Patterns
 
-See `CLAUDE_CONTEXT.md` for detailed information about:
+See `AGENTS.md` for detailed information about:
 - Authentication flow and strategies
 - JWT token lifecycle
 - Password reset implementation
 - OAuth integration patterns
 - Best practices and conventions
 
+This file works with Claude Code, GitHub Copilot, Cursor, and other AI coding assistants.
+
 ## Support
 
 For issues, questions, or contributions, please refer to the project repository.
+
+## For AI Coding Assistants
+
+This project includes an `AGENTS.md` file with detailed architecture, patterns, and conventions for AI coding assistants. If you're using Claude Code, GitHub Copilot, Cursor, or similar tools, refer to that file for comprehensive context about:
+
+- Authentication flows and patterns
+- JWT session management
+- OAuth integration (Google, Apple, Facebook)
+- Password security and reset flows
+- API response formats
+- Testing patterns
+- Security best practices
+
+The AGENTS.md file provides detailed examples and explanations to help AI assistants understand the codebase architecture.

@@ -10,11 +10,12 @@ Battle-tested project templates for modern application development. Get started 
 - ** Production Patterns** - Best practices baked in from day one
 - ** Security First** - JWT auth, environment variables, proper CORS
 - ** Well Documented** - Each template includes comprehensive documentation
+- ** AI-Friendly** - AGENTS.md files work with Claude Code, GitHub Copilot, Cursor, and other AI coding assistants
 
 ## Available Templates
 
 ### Rails API
-**Perfect for:** Backend APIs, microservices, SaaS platforms
+**Perfect starter for:** Backend APIs, microservices, SaaS platforms
 
 **Includes:**
 - Rails 7 in API mode
@@ -29,7 +30,7 @@ Battle-tested project templates for modern application development. Get started 
 - Health check endpoints
 
 ### React App
-**Perfect for:** Single-page applications, admin dashboards, web apps
+**Perfect starter for:** Single-page applications, admin dashboards, web apps
 
 **Includes:**
 - Vite for lightning-fast builds
@@ -44,7 +45,7 @@ Battle-tested project templates for modern application development. Get started 
 - Production build optimization
 
 ### Go Microservice
-**Perfect for:** High-performance APIs, system services, CLI tools
+**Perfect starter for:** High-performance APIs, system services, CLI tools
 
 **Includes:**
 - Chi HTTP router
@@ -100,7 +101,7 @@ chmod +x create-project
 ./create-project
 ```
 
-## 🗑️ Uninstallation
+## Uninstallation
 
 ### Quick Uninstall
 
@@ -132,7 +133,7 @@ This will remove:
 - All project templates
 - Nothing else on your system is affected
 
-## 🚀 Usage
+## Usage
 
 ### Interactive Mode (Recommended)
 
@@ -311,7 +312,7 @@ Contributions welcome! Here's how:
 1. Create template directory in repository root
 2. Include a `setup.sh` script (if needed)
 3. Include `.env.example` for configuration
-4. Add `CLAUDE_CONTEXT.md` for AI assistance
+4. Add `AGENTS.md` for AI coding assistant context
 5. Update this README
 6. Update `create-project` script (TEMPLATES array)
 7. Test thoroughly
@@ -377,6 +378,6 @@ Built with:
 
 ---
 
-**Made with ❤️ for developers who value speed and quality.**
+**Made with ❤️ for developers who know that time is money.**
 
 **Star ⭐ this repo if you find it useful!**

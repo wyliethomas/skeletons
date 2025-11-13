@@ -1,6 +1,43 @@
-# CLAUDE_CONTEXT.md - React Application Architecture
+# AGENTS.md - React Application Architecture
+
+> This file provides context for AI coding assistants. It follows the AGENTS.md standard
+> and works with Claude Code, GitHub Copilot, Cursor, and other AI development tools.
 
 This document explains the architecture, patterns, and conventions used in this React application. Use this as a guide when extending or modifying the codebase.
+
+## Quick Start Commands
+
+```bash
+# Setup
+./setup.sh                   # Complete Docker setup
+
+# Development
+docker compose up            # Start development server
+docker compose down          # Stop development server
+npm run dev                  # Run dev server (local, outside Docker)
+
+# Dependencies
+docker compose run --rm web npm install
+npm install                  # Install locally
+
+# Building
+docker compose run --rm web npm run build
+npm run build               # Build for production
+
+# Testing
+docker compose run --rm web npm test
+docker compose run --rm web npm run test:coverage
+npm test                    # Run tests locally
+
+# Linting
+docker compose run --rm web npm run lint
+docker compose run --rm web npm run lint:fix
+npm run lint                # Lint locally
+
+# Type Checking
+docker compose run --rm web npm run type-check
+npm run type-check          # Check TypeScript types
+```
 
 ## Architecture Overview
 

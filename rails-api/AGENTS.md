@@ -1,6 +1,40 @@
-# CLAUDE_CONTEXT.md - Rails API Architecture
+# AGENTS.md - Rails API Architecture
+
+> This file provides context for AI coding assistants. It follows the AGENTS.md standard
+> and works with Claude Code, GitHub Copilot, Cursor, and other AI development tools.
 
 This document explains the architecture, patterns, and conventions used in this Rails API project with comprehensive authentication. Use this as a comprehensive guide when extending or modifying the codebase.
+
+## Quick Start Commands
+
+```bash
+# Setup
+./setup.sh                   # Complete setup (Docker, DB, migrations)
+
+# Development
+docker compose up            # Start all services
+docker compose down          # Stop services
+
+# Database
+docker compose run --rm web rake db:create
+docker compose run --rm web rake db:migrate
+docker compose run --rm web rake db:seed
+docker compose run --rm web rake db:reset
+
+# Testing
+docker compose run --rm web rspec
+docker compose run --rm web rspec spec/models
+docker compose run --rm web rspec spec/requests
+
+# Console
+docker compose run --rm web rails console
+
+# Dependencies
+docker compose run --rm web bundle install
+
+# Linting
+docker compose run --rm web bundle exec rubocop
+```
 
 ## Architecture Overview
 

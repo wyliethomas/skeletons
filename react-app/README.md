@@ -424,4 +424,4 @@ Ensure TypeScript paths are configured correctly in `tsconfig.json` and `vite.co
 6. Implement PWA features
 7. Set up CI/CD pipeline
 
-See `CLAUDE_CONTEXT.md` for architecture details and patterns.
+See `AGENTS.md` for architecture details, patterns, and comprehensive context for AI coding assistants (works with Claude Code, GitHub Copilot, Cursor, and similar tools).

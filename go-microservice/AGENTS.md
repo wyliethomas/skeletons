@@ -1,6 +1,43 @@
-# CLAUDE_CONTEXT.md - Go Microservice Architecture
+# AGENTS.md - Go Microservice Architecture
+
+> This file provides context for AI coding assistants. It follows the AGENTS.md standard
+> and works with Claude Code, GitHub Copilot, Cursor, and other AI development tools.
 
 This document explains the architecture, patterns, and conventions used in this Go microservice. Use this as a guide when extending or modifying the codebase.
+
+## Quick Start Commands
+
+```bash
+# Setup
+go mod download          # Download dependencies
+go mod tidy              # Clean up dependencies
+
+# Development
+go run cmd/server/main.go          # Run directly
+make run                           # Run via Makefile
+make watch                         # Run with auto-reload (if available)
+
+# Building
+go build -o bin/server cmd/server/main.go    # Build binary
+make build                                     # Build via Makefile
+
+# Testing
+go test ./...                      # Run all tests
+go test -v ./...                   # Verbose output
+go test -cover ./...               # With coverage
+make test                          # Run tests via Makefile
+
+# Linting
+go fmt ./...                       # Format code
+go vet ./...                       # Vet code
+golangci-lint run                  # Run linter (if installed)
+
+# Docker
+docker build -t myservice .        # Build image
+docker run -p 8080:8080 myservice  # Run container
+make docker-build                  # Build via Makefile
+make docker-run                    # Run via Makefile
+```
 
 ## Architecture Overview
 
