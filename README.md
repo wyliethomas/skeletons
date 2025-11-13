@@ -100,7 +100,39 @@ chmod +x create-project
 ./create-project
 ```
 
-## Usage
+## 🗑️ Uninstallation
+
+### Quick Uninstall
+
+```bash
+curl -sSL https://raw.githubusercontent.com/wyliethomas/skeletons/master/uninstall.sh | bash
+```
+
+Or with wget:
+
+```bash
+wget -qO- https://raw.githubusercontent.com/wyliethomas/skeletons/master/uninstall.sh | bash
+```
+
+### Force Uninstall (Skip Confirmation)
+
+```bash
+curl -sSL https://raw.githubusercontent.com/wyliethomas/skeletons/master/uninstall.sh | bash -s -- --force
+```
+
+### Manual Uninstall
+
+```bash
+rm -f ~/.local/bin/create-project
+rm -rf ~/.local/share/project-skeletons
+```
+
+This will remove:
+- The `create-project` CLI tool
+- All project templates
+- Nothing else on your system is affected
+
+## 🚀 Usage
 
 ### Interactive Mode (Recommended)
 
