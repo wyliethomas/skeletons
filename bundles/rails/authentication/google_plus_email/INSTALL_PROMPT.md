@@ -13,9 +13,9 @@ Please follow these steps:
 
 1. Download the authentication bundle from GitHub (no authentication required):
 
-   Base URL: https://raw.githubusercontent.com/battlestag/skeletons/master/bundles/rails/authentication/google_plus_email
+   Base URL: https://raw.githubusercontent.com/wyliethomas/skeletons/master/bundles/rails/authentication/google_plus_email
 
-   Download these files to a temporary location:
+   Download these files to preload folder in current location:
    - README.md
    - BUNDLE_INFO.md
    - Gemfile.additions
@@ -27,7 +27,7 @@ Please follow these steps:
    - config/routes.rb
 
    All files are at: {Base URL}/{filepath}
-   Example: https://raw.githubusercontent.com/battlestag/skeletons/master/bundles/rails/authentication/google_plus_email/README.md
+   Example: https://raw.githubusercontent.com/wyliethomas/skeletons/master/bundles/rails/authentication/google_plus_email/README.md
 
 2. Read the downloaded README.md and BUNDLE_INFO.md files to understand:
    - What features are included
