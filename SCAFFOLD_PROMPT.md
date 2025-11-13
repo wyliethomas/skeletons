@@ -11,11 +11,17 @@ I need to scaffold a new Rails API project using a pre-built template.
 
 Please follow these steps:
 
-1. Clone the rails-api template from this repository:
-   https://github.com/battlestag/skeletons
+1. Download the rails-api template from GitHub (no authentication required):
 
-2. Copy the rails-api folder to my current directory with a new project name.
-   Ask me what I want to name the project.
+   Download URL: https://github.com/wyliethomas/skeletons/archive/refs/heads/master.tar.gz
+
+   Use curl or wget to download and extract:
+   - Download the archive
+   - Extract it to your current location
+   - The rails-api folder will be inside skeletons-master/
+
+2. Ask me what I want to name the project, then copy the rails-api folder
+   from the extracted archive to my current directory with the new project name.
 
 3. Update the .env file:
    - Change COMPOSE_NAME to match my project name

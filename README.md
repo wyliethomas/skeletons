@@ -91,12 +91,17 @@ Battle-tested project templates for modern application development. Get started 
 
 ### For AI Assistants (Claude Code, Cursor, Copilot, etc.)
 
-1. **📋 [View all AI prompts](PROMPTS_INDEX.md)** - Complete guide to using AI assistants
-2. **🚀 [Scaffold a project](SCAFFOLD_PROMPT.md)** - Copy-paste prompt to create new projects
-3. **📦 Install bundles** - Add features like authentication with one prompt
+**📋 [View all AI prompts](PROMPTS_INDEX.md)** - Complete guide to using AI assistants
+
+**🚀 Scaffold a project** - Choose your template:
+- [Rails API](SCAFFOLD_RAILS_API.md) - Backend APIs, microservices
+- [React App](SCAFFOLD_REACT_APP.md) - Frontend SPAs, dashboards
+- [Go Microservice](SCAFFOLD_GO_MICROSERVICE.md) - High-performance services
+
+**📦 Install bundles** - Add features like authentication with one prompt
 
 **Example:** Want a Rails API with Google OAuth authentication?
-1. Copy [`SCAFFOLD_PROMPT.md`](SCAFFOLD_PROMPT.md) → Paste into your AI assistant
+1. Copy [`SCAFFOLD_RAILS_API.md`](SCAFFOLD_RAILS_API.md) → Paste into your AI assistant
 2. Copy [`bundles/rails/authentication/google_plus_email/INSTALL_PROMPT.md`](bundles/rails/authentication/google_plus_email/INSTALL_PROMPT.md) → Paste into your AI assistant
 3. Done! Your API has full authentication.
 

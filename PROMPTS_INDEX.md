@@ -4,20 +4,30 @@ Ready-to-use prompts for scaffolding projects and installing bundles with any AI
 
 ## 🚀 Quick Start
 
-### Step 1: Scaffold a New Project
+### Step 1: Choose and Scaffold a Project Template
 
-📄 **Prompt File:** [`SCAFFOLD_PROMPT.md`](./SCAFFOLD_PROMPT.md)
+Pick the template that matches your needs:
 
-**Use this to:** Create a new Rails API project from scratch
+#### Rails API
+📄 **Prompt:** [`SCAFFOLD_RAILS_API.md`](./SCAFFOLD_RAILS_API.md)
 
-**What you'll get:**
-- Rails 7+ API application
-- PostgreSQL + Redis + Sidekiq
-- Docker containerized setup
-- Testing framework (RSpec)
-- Ready to develop
-
+**For:** Backend APIs, microservices, SaaS platforms
+**Includes:** Rails 7 API, PostgreSQL, Redis, Sidekiq, Docker, JWT auth structure
 **Time:** ~5 minutes
+
+#### React App
+📄 **Prompt:** [`SCAFFOLD_REACT_APP.md`](./SCAFFOLD_REACT_APP.md)
+
+**For:** Single-page applications, admin dashboards, web apps
+**Includes:** React 18, TypeScript, Vite, Tailwind CSS, React Router, Docker
+**Time:** ~3 minutes
+
+#### Go Microservice
+📄 **Prompt:** [`SCAFFOLD_GO_MICROSERVICE.md`](./SCAFFOLD_GO_MICROSERVICE.md)
+
+**For:** High-performance APIs, system services, CLI tools
+**Includes:** Chi router, structured logging, Docker, Makefile, health checks
+**Time:** ~2 minutes
 
 ---
 
@@ -82,7 +92,7 @@ These prompts are designed to work with any AI coding assistant that can:
 **Scenario:** Developer wants to build a new Rails API with authentication
 
 ```
-1. Copy SCAFFOLD_PROMPT.md → Paste into AI assistant
+1. Copy SCAFFOLD_RAILS_API.md → Paste into AI assistant
    Result: New Rails API project created
 
 2. Copy google_plus_email/INSTALL_PROMPT.md → Paste into AI assistant
@@ -91,14 +101,25 @@ These prompts are designed to work with any AI coding assistant that can:
 3. Start developing your application!
 ```
 
+**Scenario:** Developer wants to build a React dashboard
+
+```
+1. Copy SCAFFOLD_REACT_APP.md → Paste into AI assistant
+   Result: New React app with TypeScript + Tailwind created
+
+2. Start building your components!
+```
+
 ---
 
 ## 🗂️ Repository Structure
 
 ```
 project-skeletons/
-├── SCAFFOLD_PROMPT.md                    # ← Start here
 ├── PROMPTS_INDEX.md                      # ← You are here
+├── SCAFFOLD_RAILS_API.md                 # ← Rails API scaffolding prompt
+├── SCAFFOLD_REACT_APP.md                 # ← React app scaffolding prompt
+├── SCAFFOLD_GO_MICROSERVICE.md           # ← Go service scaffolding prompt
 │
 ├── rails-api/                            # Rails API skeleton template
 │   ├── AGENTS.md
