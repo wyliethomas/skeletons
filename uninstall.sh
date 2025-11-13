@@ -117,13 +117,20 @@ confirm_uninstall() {
     [[ -d "$TEMPLATES_DIR" ]] && echo "  • All project templates"
     echo ""
 
-    read -p "$(echo -e ${BOLD}${RED})Are you sure? (y/N): $(echo -e ${RESET})" -n 1 -r
-    echo ""
-    echo ""
+    # Read from /dev/tty to work when script is piped via curl
+    # If /dev/tty isn't available (automated environment), skip confirmation
+    if [[ -c /dev/tty ]]; then
+        read -p "$(echo -e ${BOLD}${RED})Are you sure? (y/N): $(echo -e ${RESET})" -n 1 -r < /dev/tty
+        echo ""
+        echo ""
 
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        print_info "Uninstall cancelled"
-        exit 0
+        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+            print_info "Uninstall cancelled"
+            exit 0
+        fi
+    else
+        print_warning "No terminal detected, use --force to uninstall without confirmation"
+        exit 1
     fi
 }
 
