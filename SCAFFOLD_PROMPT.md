@@ -12,7 +12,7 @@ I need to scaffold a new Rails API project using a pre-built template.
 Please follow these steps:
 
 1. Clone the rails-api template from this repository:
-   https://github.com/battlestag/project-skeletons
+   https://github.com/battlestag/skeletons
 
 2. Copy the rails-api folder to my current directory with a new project name.
    Ask me what I want to name the project.

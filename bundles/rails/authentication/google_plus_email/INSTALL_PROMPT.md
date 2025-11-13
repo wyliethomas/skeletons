@@ -12,7 +12,7 @@ I need to install the Email + Google OAuth authentication bundle into my Rails p
 Please follow these steps:
 
 1. Download the authentication bundle from:
-   https://github.com/battlestag/project-skeletons/tree/master/bundles/rails/authentication/google_plus_email
+   https://github.com/battlestag/skeletons/tree/master/bundles/rails/authentication/google_plus_email
 
 2. Read the README.md and BUNDLE_INFO.md files to understand:
    - What features are included
