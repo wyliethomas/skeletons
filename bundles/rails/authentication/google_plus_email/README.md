@@ -6,13 +6,115 @@ Complete authentication system with email/password and Google OAuth support.
 
 This bundle provides a drop-in authentication system for Rails applications with:
 
-- ✅ Email/password authentication with BCrypt
-- ✅ Google OAuth (Sign in with Google)
-- ✅ JWT token management
-- ✅ Password reset flow
-- ✅ Session management with 30-minute auto-expiry
-- ✅ User status management (ACTIVE, INACTIVE, PENDING, BANNED)
-- ✅ Unique API key generation per user
+- ✓ Email/password authentication with BCrypt
+- ✓ Google OAuth (Sign in with Google)
+- ✓ JWT token management
+- ✓ Password reset flow
+- ✓ Session management with 30-minute auto-expiry
+- ✓ User status management (ACTIVE, INACTIVE, PENDING, BANNED)
+- ✓ Unique API key generation per user
+
+---
+
+## Copy This Prompt
+
+Copy and paste this prompt into your AI coding assistant (Claude Code, Cursor, Copilot, etc.) to install authentication into your Rails project.
+
+**Note:** Use this after scaffolding your Rails API project with the [Rails API scaffold prompt](../../../../documentation/rails/SCAFFOLD_RAILS_API.md).
+
+```
+I need to install the Email + Google OAuth authentication bundle into my Rails project.
+
+Please follow these steps:
+
+1. Download the authentication bundle from GitHub (no authentication required):
+
+   Base URL: https://raw.githubusercontent.com/wyliethomas/skeletons/master/bundles/rails/authentication/google_plus_email
+
+   Download these files to a temporary folder:
+   - README.md
+   - BUNDLE_INFO.md
+   - Gemfile.additions
+   - models/user.rb
+   - controllers/auth_controller.rb
+   - controllers/concerns/authenticatable.rb
+   - controllers/concerns/json_web_token.rb
+   - migrations/create_users.rb
+   - config/routes.rb
+
+   All files are at: {Base URL}/{filepath}
+   Example: https://raw.githubusercontent.com/wyliethomas/skeletons/master/bundles/rails/authentication/google_plus_email/README.md
+
+2. Read the downloaded README.md and BUNDLE_INFO.md files to understand what features are included.
+
+3. Check for conflicts:
+   - Verify I don't already have Devise, Authlogic, or Clearance installed
+   - Check if app/models/user.rb already exists (if so, ask me how to proceed)
+   - Verify the routes don't conflict with existing routes
+
+4. Install dependencies:
+   - Add required gems from Gemfile.additions to my Gemfile
+   - Run bundle install
+
+5. Copy bundle files to my project:
+   - Copy models/user.rb to app/models/user.rb
+   - Copy controllers/auth_controller.rb to app/controllers/auth_controller.rb
+   - Copy controllers/concerns/authenticatable.rb to app/controllers/concerns/authenticatable.rb
+   - Copy controllers/concerns/json_web_token.rb to app/controllers/concerns/json_web_token.rb
+
+6. Create and run migration:
+   - Copy migrations/create_users.rb to db/migrate/ with current timestamp
+   - Run rails db:migrate (or docker compose exec web rails db:migrate if using Docker)
+
+7. Add routes:
+   - Merge routes from config/routes.rb into my config/routes.rb
+   - Show me the added routes
+
+8. Update ApplicationController:
+   - Add "include Authenticatable" to app/controllers/application_controller.rb
+
+9. Configure environment variables:
+   - Add GOOGLE_CLIENT_ID to .env
+   - Generate JWT_SECRET_KEY using "rails secret" and add to .env
+   - Show me what was added
+
+10. Give me a summary with:
+    - What was installed
+    - How to use authentication in my controllers
+    - How to test with curl commands
+    - Next steps (setting up Google OAuth credentials)
+
+Important: Before making any changes, show me what will be modified and ask for confirmation.
+```
+
+---
+
+## What This Does
+
+This prompt will:
+1. Download and analyze the authentication bundle
+2. Check for conflicts with your existing code
+3. Install all required files and dependencies
+4. Configure routes and environment variables
+5. Set up database tables
+6. Provide testing instructions
+
+## Requirements
+
+Before running this prompt:
+- Have a Rails 6.0+ project (use the scaffold prompt if you need one)
+- Docker should be running (if using containerized setup)
+- No existing authentication system (Devise, etc.)
+
+## After Installation
+
+You'll need to:
+1. Set up Google OAuth credentials in [Google Cloud Console](https://console.cloud.google.com/)
+2. Test the authentication flow
+3. Create authentication views (optional - works as API-only)
+4. Customize as needed
+
+---
 
 ## What's Included
 
