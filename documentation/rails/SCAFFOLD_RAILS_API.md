@@ -1,10 +1,10 @@
-# Rails API Project - Scaffolding Prompt (v2 - Optimized)
+# Rails API Project - Initial Prompt 
 
 Copy and paste this prompt into your AI coding assistant (Claude Code, Cursor, Copilot, etc.) to scaffold a new Rails API project.
 
 ---
 
-## 📋 Copy This Prompt:
+## Copy This Prompt:
 
 ```
 I need to scaffold a new Rails API project using a pre-built template.
