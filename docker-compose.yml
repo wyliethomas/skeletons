@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: ${COMPOSE_NAME}_web
+    ports:
+      - "5173:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
