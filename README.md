@@ -28,7 +28,7 @@ Battle-tested starter skeleton for rapid application development. Get started in
 - CORS configuration
 - Health check endpoints
 
-- [Rails API Documentation](documentation/rails/SCAFFOLD_RAILS_API.md)
+- [Get started](documentation/rails/SCAFFOLD_RAILS_API.md)
 
 ### React App
 **Perfect starter for:** Single-page applications, admin dashboards, web apps
