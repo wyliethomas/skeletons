@@ -1,5 +1,14 @@
 # Project Skeletons
 
+```
+▄▄▄▄·        ▐ ▄ ▄▄▄ ..▄▄ · 
+▐█ ▀█▪▪     •█▌▐█▀▄.▀·▐█ ▀. 
+▐█▀▀█▄ ▄█▀▄ ▐█▐▐▌▐▀▀▪▄▄▀▀▀█▄
+██▄▪▐█▐█▌.▐▌██▐█▌▐█▄▄▌▐█▄▪▐█
+·▀▀▀▀  ▀█▄▀▪▀▀ █▪ ▀▀▀  ▀▀▀▀ 
+```
+
+
 Battle-tested starter skeleton for rapid application development. Get started in seconds with opinionated, production-ready bones.
 
 ## Features
