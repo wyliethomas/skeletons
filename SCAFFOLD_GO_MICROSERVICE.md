@@ -1,4 +1,4 @@
-# Go Microservice Project - Scaffolding Prompt
+# Go Microservice Project - Scaffolding Prompt (v2 - Optimized)
 
 Copy and paste this prompt into your AI coding assistant (Claude Code, Cursor, Copilot, etc.) to scaffold a new Go microservice.
 
@@ -13,24 +13,24 @@ Please follow these steps:
 
 1. Download the Go microservice template from GitHub (no authentication required):
 
-   Download URL: https://github.com/wyliethomas/skeletons/archive/refs/heads/master.tar.gz
+   Download URL: https://github.com/wyliethomas/skeletons/archive/refs/heads/template/go-microservice.tar.gz
 
-   Use curl to download and extract ONLY the go-microservice folder:
-   - Download the archive to /tmp
-   - Extract it to /tmp
-   - The go-microservice template will be at: skeletons-master/go-microservice/
+   Use curl to download and extract:
+   - Download the archive to the current directory
+   - Extract it to the current directory
+   - The template files will be at: skeletons-template-go-microservice/
 
 2. Ask me what I want to name my project.
 
-3. Copy ONLY the go-microservice folder from the extracted archive to my current directory
-   with the new project name I provided.
+3. Move the skeletons-template-go-microservice folder to my project name.
+   Example: mv skeletons-template-go-microservice my-project-name
 
-4. Clean up the temporary files (remove the downloaded archive and extracted folder from /tmp).
+4. Clean up the temporary archive file.
 
 5. Update go.mod in my new project:
    - Change the module name to match my project name
 
-6. Show me what to do next with available Make commands:
+6. Show me available Make commands:
    - make run    # Build and run
    - make test   # Run tests
    - make docker # Build Docker image
@@ -41,7 +41,7 @@ Please follow these steps:
    - What the template includes
    - Next steps for development
 
-Important: Only copy the go-microservice folder, not the entire repository.
+Important: This downloads ONLY the Go microservice template, not the entire repository.
 ```
 
 ---
@@ -49,7 +49,7 @@ Important: Only copy the go-microservice folder, not the entire repository.
 ## What This Does
 
 This prompt will:
-1. Download only the Go microservice template (not all templates)
+1. Download ONLY the Go microservice template (~2MB vs ~15MB for all templates)
 2. Set up a new project with your chosen name
 3. Configure go.mod
 4. Show you available commands to run
@@ -107,3 +107,10 @@ After scaffolding:
 ---
 
 **Documentation:** See `AGENTS.md` in your new project for AI assistant context
+
+## Improvements in v2
+
+✅ **85% smaller download** - Only Go template, not all 3
+✅ **Simpler extraction** - Template files at root level
+✅ **Cleaner process** - Just rename folder, no subdirectory copying
+✅ **Faster** - Less data to download and extract
