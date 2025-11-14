@@ -1,5 +1,7 @@
 # Rails API Project - Initial Prompt 
 
+[Back to README](../../SCAFFOLD_RAILS_API.md)
+
 Copy and paste this prompt into your AI coding assistant (Claude Code, Cursor, Copilot, etc.) to scaffold a new Rails API project.
 
 ---
@@ -49,7 +51,7 @@ Important: This downloads ONLY the Rails API template, not the entire repository
 ## What This Does
 
 This prompt will:
-1. Download ONLY the Rails API template (~5MB vs ~15MB for all templates)
+1. Download ONLY the Rails API template
 2. Set up a new project with your chosen name
 3. Configure environment variables
 4. Prepare you to run setup and start developing
@@ -110,3 +112,6 @@ The following bundles can be added to your new project
 ✅ **Simpler extraction** - Template files at root level
 ✅ **Cleaner process** - Just rename folder, no subdirectory copying
 ✅ **Faster** - Less data to download and extract
+
+[Back to README](../../SCAFFOLD_RAILS_API.md)
+
