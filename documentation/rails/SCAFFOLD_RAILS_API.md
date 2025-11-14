@@ -1,6 +1,6 @@
 # Rails API Project - Initial Prompt 
 
-[Back to README](../../SCAFFOLD_RAILS_API.md)
+[Back to README](../../README.md)
 
 Copy and paste this prompt into your AI coding assistant (Claude Code, Cursor, Copilot, etc.) to scaffold a new Rails API project.
 
@@ -113,5 +113,5 @@ The following bundles can be added to your new project
 ✅ **Cleaner process** - Just rename folder, no subdirectory copying
 ✅ **Faster** - Less data to download and extract
 
-[Back to README](../../SCAFFOLD_RAILS_API.md)
+[Back to README](../../README.md)
 
