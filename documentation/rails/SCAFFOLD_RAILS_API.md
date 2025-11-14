@@ -93,10 +93,12 @@ After scaffolding:
 3. Install feature bundles (like authentication)
 4. Start building your API endpoints
 
-## Add Authentication
+## Add Bundles
 
-Want to add authentication? Use the authentication bundle:
-See: `bundles/rails/authentication/google_plus_email/INSTALL_PROMPT.md`
+The following bundles can be added to your new project
+
+- [Authentication: Google + Email ](../../bundles/rails/authentication/google_plus_email)
+
 
 ---
 
