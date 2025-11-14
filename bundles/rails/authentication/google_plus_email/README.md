@@ -6,13 +6,13 @@ Complete authentication system with email/password and Google OAuth support.
 
 This bundle provides a drop-in authentication system for Rails applications with:
 
-- ✓ Email/password authentication with BCrypt
-- ✓ Google OAuth (Sign in with Google)
-- ✓ JWT token management
-- ✓ Password reset flow
-- ✓ Session management with 30-minute auto-expiry
-- ✓ User status management (ACTIVE, INACTIVE, PENDING, BANNED)
-- ✓ Unique API key generation per user
+- Email/password authentication with BCrypt
+- Google OAuth (Sign in with Google)
+- JWT token management
+- Password reset flow
+- Session management with 30-minute auto-expiry
+- User status management (ACTIVE, INACTIVE, PENDING, BANNED)
+- Unique API key generation per user
 
 ---
 
