@@ -63,18 +63,6 @@ Battle-tested starter skeleton for rapid application development. Get started in
 
 **Drop-in feature bundles** extracted from production applications. Install complete features with all layers (models, controllers, migrations, routes) in minutes.
 
-### Available Bundles
-
-#### Authentication: Email + Google OAuth
-**Status:** ✅ Production-Ready
-**For:** Rails applications
-**Features:** Email/password + Google Sign-In, JWT tokens, session management, password reset
-
-**Installation:**
-- **With AI Assistant:** Use [`INSTALL_PROMPT.md`](bundles/rails/authentication/google_plus_email/INSTALL_PROMPT.md)
-- **Manual:** See [`README.md`](bundles/rails/authentication/google_plus_email/README.md)
-
-**Time:** ~15-30 minutes | **Difficulty:** ⭐⭐ Intermediate
 
 ---
 
@@ -85,26 +73,6 @@ Battle-tested starter skeleton for rapid application development. Get started in
 - User Profile Management
 - File Upload (S3, Azure, GCS)
 - API Rate Limiting
-
-## 🆕 AI-Assisted Workflow (New!)
-
-**Use your AI coding assistant to scaffold projects and install bundles!**
-
-### For AI Assistants (Claude Code, Cursor, Copilot, etc.)
-
-**📋 [View all AI prompts](PROMPTS_INDEX.md)** - Complete guide to using AI assistants
-
-**🚀 Scaffold a project** - Choose your template:
-- [Rails API](SCAFFOLD_RAILS_API.md) - Backend APIs, microservices
-- [React App](SCAFFOLD_REACT_APP.md) - Frontend SPAs, dashboards
-- [Go Microservice](SCAFFOLD_GO_MICROSERVICE.md) - High-performance services
-
-**📦 Install bundles** - Add features like authentication with one prompt
-
-**Example:** Want a Rails API with Google OAuth authentication?
-1. Copy [`SCAFFOLD_RAILS_API.md`](SCAFFOLD_RAILS_API.md) → Paste into your AI assistant
-2. Copy [`bundles/rails/authentication/google_plus_email/INSTALL_PROMPT.md`](bundles/rails/authentication/google_plus_email/INSTALL_PROMPT.md) → Paste into your AI assistant
-3. Done! Your API has full authentication.
 
 ---
 
@@ -175,6 +143,7 @@ Built with:
 - Inspiration from create-react-app, Rails generators, and cookiecutter
 - Best practices from the Rails, React, and Go communities
 - Feedback from developers using these templates
+- Intention to reduce tokens, save time and money
 
 ## Support
 
@@ -231,6 +200,6 @@ Built with:
 
 ---
 
-**Made with ❤️ for developers who know that time is money.**
 
 **Star ⭐ this repo if you find it useful!**
+
