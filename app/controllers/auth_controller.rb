@@ -21,6 +21,7 @@
 #   get  '/reset-password/:reset_token', to: 'auth#reset_password', as: :reset_password
 #   post '/reset-password', to: 'auth#reset_password_do'
 class AuthController < ApplicationController
+  skip_before_action :authenticate_user
   skip_before_action :require_client
   layout 'auth'
 
