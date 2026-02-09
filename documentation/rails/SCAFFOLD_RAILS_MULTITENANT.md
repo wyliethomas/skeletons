@@ -30,7 +30,8 @@ Please follow these steps:
 4. Clean up the temporary archive file.
 
 5. Update the .env.example file in my new project:
-   - Change any project-specific values to match my project name
+   - IMPORTANT: Change COMPOSE_NAME to match my project name (this prevents Docker container name conflicts)
+   - Change any other project-specific values to match my project name
    - Note that I'll need to create a .env file from .env.example
 
 6. Give me a summary with:
@@ -102,6 +103,7 @@ Before running this prompt:
 cd your-project-name
 cp .env.example .env
 # Edit .env with your configuration
+# IMPORTANT: Verify COMPOSE_NAME matches your project name to avoid container conflicts
 ```
 
 2. Set up the database:
