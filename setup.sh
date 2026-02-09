@@ -11,13 +11,29 @@ if [ ! -f .env ]; then
   cp .env.example .env
   echo "✓ .env file created"
   echo ""
+
+  echo "Generating secure secrets..."
+
+  # Generate SECRET_KEY_BASE
+  SECRET_KEY_BASE=$(openssl rand -hex 64)
+  sed -i.bak "s|SECRET_KEY_BASE=.*|SECRET_KEY_BASE=${SECRET_KEY_BASE}|g" .env
+  echo "✓ SECRET_KEY_BASE generated"
+
+  # Generate JWT_SECRET_KEY
+  JWT_SECRET_KEY=$(openssl rand -hex 64)
+  sed -i.bak "s|JWT_SECRET_KEY=.*|JWT_SECRET_KEY=${JWT_SECRET_KEY}|g" .env
+  echo "✓ JWT_SECRET_KEY generated"
+
+  # Clean up backup file
+  rm -f .env.bak
+
+  echo ""
+  echo "✓ Security secrets generated successfully!"
+  echo ""
   echo "⚠️  IMPORTANT: Review and update .env with your configuration!"
   echo "   Pay special attention to:"
   echo "   - COMPOSE_NAME (your project name)"
-  echo "   - SECRET_KEY_BASE (generate with: rails secret)"
-  echo "   - JWT_SECRET_KEY (generate with: openssl rand -hex 64)"
-  echo ""
-  read -p "Press Enter to continue after updating .env, or Ctrl+C to exit..."
+  echo "   - Database credentials (if not using defaults)"
   echo ""
 fi
 
