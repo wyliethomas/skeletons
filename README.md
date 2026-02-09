@@ -42,13 +42,51 @@ A production-ready Rails application seed with built-in multi-tenant architectur
 
 ## Quick Start
 
-### Prerequisites
+Choose your preferred development environment:
 
+### Option A: Docker (Recommended)
+
+**Prerequisites:**
+- Docker and Docker Compose installed
+
+**Setup:**
+```bash
+# 1. Clone the repository
+git clone <your-repo>
+cd rails-seed-multitenant
+
+# 2. Run the setup script
+./setup.sh
+
+# 3. Start the application
+docker compose up
+```
+
+**Access the application:**
+- Navigate to http://localhost:3000
+- Sign in with default credentials:
+  - **Super Admin**: admin@example.com / Admin123!
+  - **Demo Admin**: demo@example.com / Demo123!
+  - **Member**: member@example.com / Member123!
+
+⚠️ **IMPORTANT**: Change these passwords immediately in production!
+
+**Useful Docker commands:**
+```bash
+docker compose up -d          # Run in background
+docker compose logs -f        # View logs
+docker compose down           # Stop all services
+docker compose exec web bash  # Access Rails console
+docker compose run --rm web rake db:migrate  # Run migrations
+```
+
+### Option B: Local Development
+
+**Prerequisites:**
 - Ruby 3.2+
 - PostgreSQL 12+
-- Redis (optional, for caching)
 
-### Installation
+**Installation:**
 
 1. **Clone and setup**:
    ```bash
@@ -77,10 +115,7 @@ A production-ready Rails application seed with built-in multi-tenant architectur
 
 5. **Access the application**:
    - Navigate to http://localhost:3000
-   - Sign in with default credentials:
-     - **Super Admin**: admin@example.com / Admin123!
-     - **Demo Admin**: demo@example.com / Demo123!
-     - **Member**: member@example.com / Member123!
+   - Sign in with default credentials (same as above)
 
    ⚠️ **IMPORTANT**: Change these passwords immediately in production!
 
