@@ -39,6 +39,23 @@ Battle-tested starter skeleton for rapid application development. Get started in
 
 - [Get started](documentation/rails/SCAFFOLD_RAILS_API.md)
 
+### Rails Multitenant
+**Perfect starter for:** SaaS platforms, B2B applications, multi-client systems
+
+**Includes:**
+- Everything in Rails API plus:
+- Client model with URL key scoping
+- JWT authentication pre-configured
+- User management system
+- Admin namespace with privileges
+- Soft delete functionality
+- Client data isolation
+- Rate limiting with Rack::Attack
+- Tailwind CSS
+- Kamal deployment setup
+
+- [Get started](documentation/rails/SCAFFOLD_RAILS_MULTITENANT.md)
+
 ### React App
 **Perfect starter for:** Single-page applications, admin dashboards, web apps
 
@@ -193,19 +210,21 @@ Built with:
 
 ## Template Comparison
 
-| Feature | Rails API | React App | Go Microservice |
-|---------|-----------|-----------|-----------------|
-| Language | Ruby | TypeScript/JavaScript | Go |
-| Purpose | Backend API | Frontend SPA | High-performance API |
-| Database | PostgreSQL ✅ | - | Optional |
-| Authentication | JWT ✅ | - | Optional |
-| Background Jobs | Sidekiq ✅ | - | - |
-| Caching | Redis ✅ | - | - |
-| Docker | ✅ | ✅ | ✅ |
-| TypeScript | - | ✅ | - |
-| Test Suite | RSpec | Vitest | Go testing |
-| Build Time | ~2 min | ~30 sec | ~10 sec |
-| Runtime | Ruby VM | Browser | Native binary |
+| Feature | Rails API | Rails Multitenant | React App | Go Microservice |
+|---------|-----------|-------------------|-----------|-----------------|
+| Language | Ruby | Ruby | TypeScript/JavaScript | Go |
+| Purpose | Backend API | SaaS/B2B Platform | Frontend SPA | High-performance API |
+| Database | PostgreSQL ✅ | PostgreSQL ✅ | - | Optional |
+| Authentication | JWT ✅ | JWT ✅ (built-in) | - | Optional |
+| Multitenancy | - | Client scoping ✅ | - | - |
+| Admin System | - | ✅ | - | - |
+| Background Jobs | Sidekiq ✅ | Solid Queue ✅ | - | - |
+| Caching | Redis ✅ | Solid Cache ✅ | - | - |
+| Docker | ✅ | ✅ | ✅ | ✅ |
+| TypeScript | - | - | ✅ | - |
+| Test Suite | RSpec | Minitest | Vitest | Go testing |
+| Build Time | ~2 min | ~2 min | ~30 sec | ~10 sec |
+| Runtime | Ruby VM | Ruby VM | Browser | Native binary |
 
 ---
 
