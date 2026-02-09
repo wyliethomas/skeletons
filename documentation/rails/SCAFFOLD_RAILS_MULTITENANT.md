@@ -29,10 +29,10 @@ Please follow these steps:
 
 4. Clean up the temporary archive file.
 
-5. Update the .env.example file in my new project:
-   - IMPORTANT: Change COMPOSE_NAME to match my project name (this prevents Docker container name conflicts)
-   - Change any other project-specific values to match my project name
-   - Note that I'll need to create a .env file from .env.example
+5. Set up environment configuration:
+   - Update COMPOSE_NAME in .env.example to match my project name (this prevents Docker container name conflicts)
+   - Copy .env.example to .env in my new project directory
+   - The .env file should have COMPOSE_NAME set to my project name
 
 6. Give me a summary with:
    - Project location and name
@@ -98,22 +98,24 @@ Before running this prompt:
 
 ## After Scaffolding
 
-1. Create your `.env` file:
+The AI assistant will have already created your `.env` file with COMPOSE_NAME set to your project name.
+
+1. (Optional) Review and customize your `.env` file:
 ```bash
 cd your-project-name
-cp .env.example .env
-# Edit .env with your configuration
-# IMPORTANT: Verify COMPOSE_NAME matches your project name to avoid container conflicts
+# Edit .env if you need to customize any settings
+# COMPOSE_NAME should already be set to your project name
 ```
 
-2. Set up the database:
+2. Start Docker and set up the database:
 ```bash
-bin/setup
+docker-compose up -d
+docker-compose exec web bin/rails db:migrate
 ```
 
-3. Start the development server:
-```bash
-bin/dev
+3. Access your application:
+```
+Open http://localhost:3000 in your browser
 ```
 
 Your application will be available at: http://localhost:3000
