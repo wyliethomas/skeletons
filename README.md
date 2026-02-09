@@ -42,6 +42,8 @@ A production-ready Rails application seed with built-in multi-tenant architectur
 
 ## Quick Start
 
+> **TL;DR**: Run `./setup.sh` to automatically configure everything, then `docker compose up` to start the app.
+
 Choose your preferred development environment:
 
 ### Option A: Docker (Recommended)
@@ -55,7 +57,14 @@ Choose your preferred development environment:
 git clone <your-repo>
 cd rails-seed-multitenant
 
-# 2. Run the setup script
+# 2. Run the automated setup script
+# This will:
+#   - Create .env file from .env.example
+#   - Generate secure SECRET_KEY_BASE and JWT_SECRET_KEY
+#   - Build Docker containers
+#   - Install dependencies
+#   - Create and migrate database
+#   - Seed default users
 ./setup.sh
 
 # 3. Start the application
