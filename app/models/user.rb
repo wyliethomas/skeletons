@@ -20,7 +20,7 @@ class User < ApplicationRecord
   include AdminPrivileges
   include SoftDeletable
 
-  enum role: { member: 'member', admin: 'admin', super_admin: 'super_admin' }
+  enum :role, { member: 'member', admin: 'admin', super_admin: 'super_admin' }
 
   attr_accessor :password, :password_confirmation,
                 :new_password, :new_password_confirmation
