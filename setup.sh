@@ -60,6 +60,7 @@ echo ""
 echo "Setting up database..."
 docker compose run --rm web rake db:create
 docker compose run --rm web rake db:migrate
+docker compose run --rm web bin/rails runner "load 'db/queue_schema.rb'"
 docker compose run --rm web rake db:seed
 
 echo ""
